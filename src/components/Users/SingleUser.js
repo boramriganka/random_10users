@@ -102,7 +102,7 @@ export default function SingleUser({ data }) {
             <div className="modal-box">
               <div className="modal-content">
                 <div className="modal-title">
-                  <h3>Modal</h3>
+                  <h3>Edit the User</h3>
                   <button onClick={() => setOpenModal(!isModelOpened)}>
                     <img src={close} alt="" className="modal-close" />
                   </button>
