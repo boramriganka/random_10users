@@ -1,0 +1,349 @@
+/***this mixin is quite useful ***/
+/** reference : https://github.com/Necromancerx/media-queries-scss-mixins **/
+.users-box {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 599px) {
+  .users-box {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.single-user-box {
+  margin: 0;
+  width: 250px;
+  height: auto;
+  margin: 15px 15px;
+  padding: 1rem;
+  border: 1px solid #f8f8f8fc;
+}
+
+.single-user-pro-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f8f8f8fc;
+}
+
+.single-user-pro-img {
+  width: 200px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.single-user-main-data {
+  padding: 15px 20px;
+}
+
+.single-user-icon {
+  width: 20px;
+  height: auto;
+}
+
+.single-user-info {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px 10px;
+  color: #646464;
+}
+
+.single-user-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 10px;
+}
+
+.single-user-choice {
+  background-color: #f8f8f8fc;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-top: 1.6px solid #f8f8f8fc;
+}
+
+.single-user-choice-button {
+  width: 30%;
+}
+
+.single-user-choice-button:hover {
+  cursor: pointer;
+}
+
+.modal-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+.modal-content {
+  width: 600px;
+  background-color: white;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.modal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 30px;
+  border-bottom: 0.5px solid #f8f8f8fc;
+}
+
+.modal-close {
+  width: 16px;
+  height: auto;
+}
+
+.modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0px 0px 0px;
+}
+
+.modal-form-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.modal-form-submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: 0.5px solid #f8f8f8fc;
+  padding: 10px 0px;
+  margin-top: 30px;
+}
+
+.modal-form-button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.modal-form-warning {
+  color: red;
+}
+
+.modal-form-input {
+  margin: 0px 10px;
+  width: 350px;
+}
+
+.modal-cancel {
+  color: #646464;
+  border: 0.5px solid #646464;
+  margin: 0px 10px;
+}
+
+.modal-ok {
+  color: white;
+  background-color: #01b0eb;
+  margin-right: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  padding-left: 10px;
+  color: #3a3a3a;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .modal-content {
+    width: 95vw;
+  }
+  .modal-form {
+    width: 100%;
+  }
+  .modal-form-choice {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal-form-input {
+    margin: 0px 0px;
+    width: 80vw;
+  }
+  label {
+    width: 80vw;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1079px) and (orientation: landscape) {
+  .modal-content {
+    width: 90vw;
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
+    max-height: 100vh;
+    overflow: scroll;
+  }
+}
+
+.loading-box {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f8f8f8fc;
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 3.0s infinite linear;
+  animation: sk-rotate 3.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #ff0404;
+  border-radius: 100%;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */

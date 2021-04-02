@@ -1,0 +1,306 @@
+/***this mixin is quite useful ***/
+/** reference : https://github.com/Necromancerx/media-queries-scss-mixins **/
+@import 'media-queries.scss';
+
+$primary: #646464;
+$secondary: #f8f8f8fc;
+
+// using css grid 
+// to create a 4 column layout for desktop 
+// and 1 column layout for mobile 
+
+.users {
+    width:100%;
+      &-box {
+        display: grid;
+        grid-gap: 10px;
+        grid-auto-flow: row;
+        width:100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+      &-box {
+      @include xs {
+          display: grid;
+          place-items:center;
+          width:100%;
+        grid-template-columns: 1fr ;
+      }
+   }
+  
+}
+
+.single-user {
+  &-box {
+    margin: 0;
+    width: 250px;
+    height: auto;
+    margin: 15px 15px;
+    padding:1rem;
+    border: 1px solid $secondary;
+  }
+
+  &-pro {
+    &-box {
+      display: flex;
+      align-items: center;
+      background-color: $secondary;
+    }
+
+    &-img {
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &-main-data {
+    padding: 15px 20px;
+  }
+
+  &-icon {
+    width: 20px;
+    height: auto;
+  }
+
+  &-info {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 10px;
+    color: $primary;
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 10px;
+    }
+  }
+  &-choice {
+    background-color: $secondary;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1.6px solid $secondary;
+
+    &-button {
+      width: 30%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    // &-vertical-line {
+    //   border-left: 1.6px solid $secondary;
+    //   height: 18px;
+    // }
+  }
+}
+
+.modal {
+  &-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.671);
+  }
+
+  &-content {
+    width: 600px;
+    background-color: white;
+    height: min-content;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    border-bottom: 0.5px solid $secondary;
+  }
+
+  &-close {
+    width: 16px;
+    height: auto;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 20px 0px 0px 0px;
+
+    &-choice {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+
+    &-submit {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      border-top: 0.5px solid $secondary;
+      padding: 10px 0px;
+      margin-top: 30px;
+    }
+
+    &-button {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    &-warning {
+      color: red;
+    }
+
+    &-input {
+      margin: 0px 10px;
+      width: 350px;
+    }
+  }
+
+  &-cancel {
+    color: $primary;
+    border: 0.5px solid $primary;
+    margin: 0px 10px;
+  }
+
+  &-ok {
+    color: white;
+    background-color: rgb(1, 176, 235);
+    margin-right: 20px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  padding-left: 10px;
+  color: #3a3a3a;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+@include xs {
+  
+  .modal {
+    &-content {
+      width: 95vw;
+    }
+
+    &-form {
+      width: 100%;
+
+      &-choice {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      &-input {
+        margin: 0px 0px;
+        width: 80vw;
+      }
+    }
+  }
+
+  label {
+    width: 80vw;
+    margin-bottom: 20px;
+  }
+}
+
+@inclue lt-lg {
+  .modal {
+    &-content {
+      position:absolute;
+      top:50;
+      bottom:50;
+      left:50;
+      right:50;
+      width: 40vw;
+      min-height: min-content;
+      max-height: 100vh;
+      overflow: scroll;
+    }
+  }
+}
+
+//Loading
+.loading-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: #fe8c00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.spinner {
+  margin: 100px auto;
+  width: 77px;
+  height: 77px;
+  position: relative;
+  text-align: center;
+  
+  -webkit-animation: sk-rotate 3.0s infinite linear;
+  animation: sk-rotate 3.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color:#dadbd3;
+  border-radius: 100%;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
