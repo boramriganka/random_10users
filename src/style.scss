@@ -50,11 +50,12 @@ $secondary: #f8f8f8fc;
     &-img {
       width: 200px;
       height: auto;
+      object-fit: contain;
     }
   }
 
   &-main-data {
-    padding: 15px 20px;
+    padding: 0 10px;
   }
 
   &-icon {
