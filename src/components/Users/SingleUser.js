@@ -21,7 +21,7 @@ export default function SingleUser({ data }) {
   });
 
   // As soon as we get the name image will be loaded
-  const [imageName, setImageName] = useState(data.name);
+  // const [imageName, setImageName] = useState(data.name);
   const [userState, setUserData] = useState({
     name: data.name,
     email: data.email,
@@ -67,7 +67,7 @@ export default function SingleUser({ data }) {
         <></>
       ) : (
         <div className="single-user-box">
-          <UserImage name={imageName} />
+          <UserImage name={userState.name} />
           <UserData userState={userState} />
 
           <div className="single-user-choice">
