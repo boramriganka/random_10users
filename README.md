@@ -1,5 +1,5 @@
 # random_10users
-# Zelthy Assignment
+
 
 ### This app can fetch 10 random users from "jsonplaceholder api" . We can like,edit and delete user.
 
